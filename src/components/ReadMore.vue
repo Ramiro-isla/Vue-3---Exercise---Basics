@@ -2,7 +2,13 @@
 import { ref } from "vue";
 
 const title = ref("Exercise Read More");
-
+function showText() {
+  let p = document.querySelector(".cut-text");
+  p.style = `
+  overflow: inherit;
+  white-space: break-spaces;
+  `;
+}
 </script>
 
 <template>
@@ -17,7 +23,7 @@ const title = ref("Exercise Read More");
         temporibus pariatur ab repellendus dignissimos natus aliquam odit ullam,
         quaerat autem non hic, quidem dolore laboriosam.
       </p>
-      <button class="btn btn-primary">Show More</button>
+      <button class="btn btn-primary" @click="showText()">Show More</button>
     </div>
     <hr class="mb-4" />
   </div>
